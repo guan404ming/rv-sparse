@@ -1,7 +1,8 @@
 # RV-Sparse: `sparse_multiply`
 
-Submission for the RV-Sparse coding challenge. Implements `sparse_multiply`,
-which scans a dense row-major matrix `A`, extracts its non-zero elements
+Repository: <https://github.com/guan404ming/rv-sparse>
+
+Implements `sparse_multiply`, which scans a dense row-major matrix `A`, extracts its non-zero elements
 into Compressed Sparse Row (CSR) format, and computes `y = A * x`. All
 buffers are caller-owned; the function performs zero dynamic allocation.
 
@@ -143,7 +144,7 @@ runs for at least 50 ms; we report the best of 5 trials.
 
 ### Runtime vs density at 256 x 256
 
-![density sweep](results/density_sweep.png)
+![density sweep](https://raw.githubusercontent.com/guan404ming/rv-sparse/main/results/density_sweep.png)
 
 | density | M1     | M2      | M3     | M4      | M5     |
 |---------|--------|---------|--------|---------|--------|
@@ -166,7 +167,7 @@ Observations:
 
 ### Runtime vs N at density 10% (N x N matrices)
 
-![size sweep](results/size_sweep.png)
+![size sweep](https://raw.githubusercontent.com/guan404ming/rv-sparse/main/results/size_sweep.png)
 
 | N    | M1       | M2        | M3       | M4        | M5        |
 |------|----------|-----------|----------|-----------|-----------|
@@ -183,7 +184,7 @@ well while the branchy variants do not.
 
 ### Speedup vs M2 at 256 x 256, density 10%
 
-![speedup](results/speedup_bar.png)
+![speedup](https://raw.githubusercontent.com/guan404ming/rv-sparse/main/results/speedup_bar.png)
 
 M3 is **2.84x** faster than M2 in the realistic sparse regime.
 
