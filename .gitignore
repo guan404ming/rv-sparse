@@ -53,3 +53,11 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Build artifacts (extensionless binaries from gcc -o)
+/run
+/bench/run_bench
+
+# Python
+__pycache__/
+*.pyc
